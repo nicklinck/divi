@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.button {
+    width: 100%;
+
+}

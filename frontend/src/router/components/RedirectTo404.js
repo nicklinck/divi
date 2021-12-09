@@ -1,9 +1,9 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const RedirectTo404 = ({ location }) => {
-  return <Redirect to={Object.assign({}, location, { state: { is404: true } })} />;
+  return <Navigate to={Object.assign({}, location, { state: { is404: true } })} />;
 };
 
 RedirectTo404.propTypes = {

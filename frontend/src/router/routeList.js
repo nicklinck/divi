@@ -1,4 +1,5 @@
 export default {
   landing: '/',
-  signIn: '/login'
+  signIn: '/login',
+  notFound: '*'
 };

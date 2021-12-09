@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import {
-  BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -8,7 +7,7 @@ import {
 // Components
 import NavBarComponent from '../Components/Landing/NavBarComponent';
 import ScrollToTop from   './components/ScrollToTop';
-import RedirectTo404 from './components/RedirectTo404';
+import RedirectTo404 from './components/RedirectTo404/index';
 
 // List of Routes
 import routes from './routeList';
@@ -23,9 +22,9 @@ const AppRouter = () => {
       <ScrollToTop>
       <NavBarComponent />
       <Routes>
-        <Route exact path={routes.landing} element={<Landing />} />
-        <Route exact path={routes.signIn}  element={<SignIn />}  />
-        <Route exact path={'/not_found'}   element={<RedirectTo404 />} />
+        <Route path={routes.landing}  element={<Landing />}       />
+        <Route path={routes.signIn}   element={<SignIn /> }       />
+        <Route path={routes.notFound} element={<RedirectTo404 />} />
       </Routes>
       </ScrollToTop>
     </Suspense>

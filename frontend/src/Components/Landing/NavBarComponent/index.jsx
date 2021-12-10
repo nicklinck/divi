@@ -15,12 +15,8 @@ const NavBarComponent = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link >
-                  <Link className="link" to={routes.landing}> Home </Link>
-                </Nav.Link>
-                <Nav.Link >
-                  Explore
-                </Nav.Link>
+                <Nav.Link className="link" href={routes.landing}> Home </Nav.Link >
+                <Nav.Link className="link" href={routes.explore}> Explore </Nav.Link >
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item >Action</NavDropdown.Item>
                   <NavDropdown.Item >Another action</NavDropdown.Item>

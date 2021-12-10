@@ -1,9 +1,8 @@
-.container {
+.Container {
     display: grid;
     justify-content: center;
 }
 
-.button {
+.Button {
     width: 100%;
-
 }

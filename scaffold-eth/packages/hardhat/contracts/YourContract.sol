@@ -10,10 +10,24 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 contract YourContract is ERC1155 {
 
     // contract's "state variables" which are stored on chain
-    mapping(uint256 => address) public propertyCreator; // not used yet
-    mapping(address => mapping(uint256 => uint256)) public owners;
+    mapping(uint256 => mapping(address => uint256)) public propertyShares;
+    mapping(uint256 => address[]) public propertyOwners;
+    //string[] public ipfsData;
     uint256 public currentPropertyID = 0;
-    uint256 public defaultSupply = 365;
+    uint256 public defaultSupply = 52;
+
+    // property struct
+    struct Property {
+        address creator;
+        uint256 id;
+        uint256 price;
+        uint256 availableShares;
+    }
+
+    Property[] public properties;
+
+    // Events
+    event PropertyCreated(address indexed owner, uint256 indexed propertyID, uint256 shares, uint256 price);
 
     // this is what scaffold ETH uses to deploy the contract and make requests
     address public msgSender;
@@ -24,20 +38,29 @@ contract YourContract is ERC1155 {
     }
 
     // allows the user to create a Property and gives them all shares of the Property
-    function createProperty() public {
+    function createProperty(uint256 price) public {
         // give the person who create the property all of the tokens for this property
-        propertyCreator[currentPropertyID] = msg.sender; // not used yet
         _mint(msg.sender, currentPropertyID, defaultSupply, "");
-        owners[msg.sender][currentPropertyID] = defaultSupply;
+        // create the property
+        Property memory property = Property(msg.sender, currentPropertyID, price, defaultSupply);
+        // add the property to the list of properties
+        properties.push(property);
         currentPropertyID += 1;
+        emit PropertyCreated(msg.sender, currentPropertyID-1, defaultSupply, price);
     }
 
-    // check if an account has any overnship in a property
+    //function buyProperty(unit256 propertyID, unit256 numberOfShares) public {
+
+    //}
+
+    //function sellProperty(address owner, unit256 propertyID, unit256 numberOfShares) public {
+
+    //}
+
+    // check if an account has any ownership in a property
     // permissions: anyone can check who owns a property.
     function balanceOf(address accountToCheck, uint256 propertyId) public view override returns (uint256){
-        return owners[accountToCheck][propertyId];
+        return propertyShares[propertyId][accountToCheck];
     }
-
-    function
 
 }

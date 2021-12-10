@@ -1,0 +1,13 @@
+.Properties {
+    display: flex;
+}
+
+.Properties-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Property {
+    display: flex;
+    width: 50%;
+}

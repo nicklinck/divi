@@ -13,7 +13,7 @@ const Login = () => {
 
 const CircleCardComponent = () => {
   return (
-    <Container>
+    <div className="Container">
       <Row>
         <Col>
           <Form>
@@ -32,13 +32,13 @@ const CircleCardComponent = () => {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
-            <Button onClick={Login} className="button" variant="primary" type="submit">
+            <Button onClick={Login} className="Button" variant="primary" type="submit">
               Submit
             </Button>
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 

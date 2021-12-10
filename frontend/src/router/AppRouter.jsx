@@ -15,6 +15,9 @@ import routes from './routeList';
 // Views
 import Landing from '../Views/Landing/index';
 import SignIn from '../Views/SignIn/index';
+import Explore from '../Views/Explore/index';
+import PropertyView from '../Views/Property/View';
+import PropertyCreate from '../Views/Property/Create';
 
 const AppRouter = () => {
   return(
@@ -22,9 +25,12 @@ const AppRouter = () => {
       <ScrollToTop>
       <NavBarComponent />
       <Routes>
-        <Route path={routes.landing}  element={<Landing />}       />
-        <Route path={routes.signIn}   element={<SignIn /> }       />
-        <Route path={routes.notFound} element={<RedirectTo404 />} />
+        <Route path={routes.landing}        element={<Landing />}         />
+        <Route path={routes.signIn}         element={<SignIn /> }         />
+        <Route path={routes.explore}        element={<Explore /> }        />
+        <Route path={routes.propertyCreate} element={<PropertyCreate /> } />
+        <Route path={routes.propertyView}   element={<PropertyView /> }   />
+        <Route path={routes.notFound}       element={<RedirectTo404 />}   />
       </Routes>
       </ScrollToTop>
     </Suspense>

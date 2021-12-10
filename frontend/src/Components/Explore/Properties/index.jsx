@@ -1,8 +1,9 @@
-import { Row, Button, Container } from 'react-bootstrap';
-import Property from '../../../Components/Explore/Property'
+import { Button, Row, Container } from 'react-bootstrap';
+import Property from '../Property'
 import { useNavigate } from 'react-router-dom';
+import './styles.css';
 
-const PropertyView = () => {
+const Properties = () => {
   const navigate = useNavigate();
 
   const createProperty = () => {
@@ -19,9 +20,14 @@ const PropertyView = () => {
       </Row>
       <Row className="Properties">
         <Property className="Property" />
+        <Property className="Property" />
+        <Property className="Property" />
+        <Property className="Property" />
+        <Property className="Property" />
+        <Property className="Property" />
       </Row>
     </Container>
   );
 }
 
-export default PropertyView;
+export default Properties;

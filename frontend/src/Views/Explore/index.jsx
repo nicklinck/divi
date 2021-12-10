@@ -1,17 +1,20 @@
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Row, Col, Container } from 'react-bootstrap';
+import Sidebar from '../../Components/Explore/Sidebar'
+import Properties from '../../Components/Explore/Properties'
 
-const App = () => {
-  const alert = () => {
-    window.alert('Hello')
-  }
-
+const Explore = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col xs={3}>
+          <Sidebar />
+        </Col>
+        <Col xs={9}>
+          <Properties/>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
-export default App;
+export default Explore;

@@ -10,3 +10,9 @@
 .Carousel {
     width: 50%;
 }
+
+@media (max-width: 990px) {
+	.Carousel {
+        width: 100%;
+	}
+}

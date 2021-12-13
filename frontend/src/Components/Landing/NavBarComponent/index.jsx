@@ -11,7 +11,7 @@ const NavBarComponent = () => {
           <Container>
             <Navbar.Brand>
               <img className="photo" src="/images/logo2.png" alt="Logo" />
-              <Link className="link" to={routes.landing}> Divi Dao </Link>
+              <Link className="link" to={routes.landing}> DiviDAO </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

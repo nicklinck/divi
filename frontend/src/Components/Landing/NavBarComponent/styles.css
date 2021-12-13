@@ -6,3 +6,8 @@
     text-decoration: none;
     color: rgba(0,0,0,.7);
 }
+
+.photo {
+    height: 40px;
+    width:  40px;
+}

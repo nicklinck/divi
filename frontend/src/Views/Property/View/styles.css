@@ -1,0 +1,12 @@
+.Property-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Icon {
+    cursor: pointer;
+}
+
+.Carousel {
+    width: 50%;
+}

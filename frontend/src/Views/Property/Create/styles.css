@@ -2,3 +2,7 @@
     display: grid;
     justify-content: center;
 }
+
+.Property-header {
+    margin-bottom: 3rem;
+}

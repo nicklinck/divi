@@ -1,0 +1,54 @@
+.Box{
+    padding: 80px 60px;
+    background: black;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    margin-top: 3rem; 
+}
+  
+@media (max-width: 1000px) {
+    .Box {
+        padding: 70px 30px;
+    }
+}
+   
+.Footer-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 2rem;
+}
+   
+.Column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 60px;
+}
+
+@media (max-width: 1000px) {
+    .Row {
+        grid-template-columns: repeat(auto-fill, 
+                               minmax(200px, 1fr));
+    }
+}
+   
+.FooterLink {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    /* &:hover {
+        color: green;
+        transition: 200ms ease-in;
+    } */
+}
+   
+.Heading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+}

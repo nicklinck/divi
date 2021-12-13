@@ -10,6 +10,7 @@ const NavBarComponent = () => {
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand>
+              <img className="photo" src="/images/logo2.png" alt="Logo" />
               <Link className="link" to={routes.landing}> Divi Dao </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,15 +18,7 @@ const NavBarComponent = () => {
               <Nav className="me-auto">
                 <Nav.Link className="link" href={routes.landing}> Home </Nav.Link >
                 <Nav.Link className="link" href={routes.explore}> Explore </Nav.Link >
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item >Action</NavDropdown.Item>
-                  <NavDropdown.Item >Another action</NavDropdown.Item>
-                  <NavDropdown.Item >Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item >
-                    <Link style={{"text-decoration": "none"}} to={routes.signIn}> Sign In </Link>
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link className="link" href={routes.signIn}> Sign In </Nav.Link >
               </Nav>
             </Navbar.Collapse>
           </Container>

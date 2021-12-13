@@ -1,17 +1,11 @@
-import { Row, Col, Container } from 'react-bootstrap';
-import Sidebar from '../../Components/Explore/Sidebar'
+import { Row, Container } from 'react-bootstrap';
 import Properties from '../../Components/Explore/Properties'
 
 const Explore = () => {
   return (
-    <Container fluid>
+    <Container>
       <Row>
-        <Col xs={3}>
-          <Sidebar />
-        </Col>
-        <Col xs={9}>
-          <Properties/>
-        </Col>
+        <Properties/>
       </Row>
     </Container>
   );

@@ -1,13 +1,35 @@
 .Properties {
-    display: flex;
+    margin-top: 2.5rem;
 }
 
 .Properties-header {
+    text-align: center;
+}
+
+.Properties-filters {
     display: flex;
-    justify-content: space-between;
+    margin-top: 2.4rem;
+    align-self: center;
+}
+
+.Filters {
+    align-self: center;
 }
 
 .Property {
-    display: flex;
     width: 50%;
+}
+
+.Properties-Button {
+    margin: 2rem;
+}
+
+.Create-Property-Icon {
+    margin-left: 0.22rem;
+}
+
+@media (max-width: 810px) {
+	.Property {
+        width: 100%;
+	}
 }

@@ -1,11 +1,10 @@
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import './styles.css'
 
-const Filter = () => {
+const Filter = (props) => {
   return (
     <div className="Filter">
-      <header className="Filter-header">
-          Lowest Price
-      </header>
+      <NavDropdown.Item > {props.name} </NavDropdown.Item>
     </div>
   );
 }

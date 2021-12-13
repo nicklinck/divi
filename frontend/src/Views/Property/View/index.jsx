@@ -1,24 +1,58 @@
-import { Row, Button, Container } from 'react-bootstrap';
+import { Row, Button, Container, Carousel, Image } from 'react-bootstrap';
 import Property from '../../../Components/Explore/Property'
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Icon from '@mdi/react';  
+import { mdiArrowLeft } from '@mdi/js';
+import routes from '../../../router/routeList';
+import './styles.css';
 
 const PropertyView = () => {
   const navigate = useNavigate();
 
-  const createProperty = () => {
-    navigate(`/property/create`)  
+  const purchaseProperty = () => {
+    console.log('Clicked')
   }
 
   return (
     <Container>
       <Row>
-        <div className="Properties-header">
-          <header> Properties </header>
-          <Button onClick={createProperty}> Create Property </Button>
+        <div className="Property-header">
+          <Link className="link" to={routes.explore} > 
+            <Icon className="Icon" path={mdiArrowLeft} size={1.8} />
+          </Link>
+          <mdiFilter />
+          <Button onClick={purchaseProperty}> Buy Now <mdiPlusCircleOutline /></Button>
         </div>
       </Row>
-      <Row className="Properties">
-        <Property className="Property" />
+      <Row style={{justifyContent: "center"}}>
+        <Carousel className="Carousel">
+          <Carousel.Item>
+            <Image
+              className="d-block w-100"
+              src={'/images/example5.png'}
+              alt="First slide"
+              thumbnail
+            />
+            <Carousel.Caption> <h3>First</h3> </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              className="d-block w-100"
+              src={'/images/example4.png'}
+              alt="Second slide"
+            />
+            <Carousel.Caption> <h3>Second</h3> </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              className="d-block w-100"
+              src={'/images/example5.png'}
+              alt="Third slide"
+            />
+            <Carousel.Caption> <h3>Third</h3> </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </Row>
     </Container>
   );

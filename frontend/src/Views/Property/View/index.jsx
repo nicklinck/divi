@@ -22,7 +22,7 @@ const PropertyView = () => {
             <Icon className="Icon" path={mdiArrowLeft} size={1.8} />
           </Link>
           <mdiFilter />
-          <Button onClick={purchaseProperty}> Buy Now <mdiPlusCircleOutline /></Button>
+          <Button onClick={() => purchaseProperty()}> Buy Now <mdiPlusCircleOutline /></Button>
         </div>
       </Row>
       <Row style={{justifyContent: "center"}}>

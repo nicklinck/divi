@@ -40,10 +40,6 @@
     margin-bottom: 20px;
     font-size: 18px;
     text-decoration: none;
-    /* &:hover {
-        color: green;
-        transition: 200ms ease-in;
-    } */
 }
    
 .Heading {
@@ -51,4 +47,39 @@
     color: #fff;
     margin-bottom: 40px;
     font-weight: bold;
+}
+
+.Icons {
+    display: flex;
+}
+
+.Icon {
+    height: 60px;
+    width:  60px;
+    margin-right: 1rem;
+}
+
+#Get-In {
+    border-radius: 27px;
+    /* height: auto;
+    width: 90%; */
+}
+
+#Im-In {
+    background-color: purple;
+    color: white;
+    border-radius: 27px;
+    cursor: pointer;
+}
+
+.Title {
+    color: white;  
+    margin-top: -2rem;
+    font-size: 30px;
+}
+
+.Policy {
+    display: flex;
+    justify-content: space-between;
+    color: white;
 }

@@ -8,8 +8,7 @@
 
 .Properties-filters {
     display: flex;
-    margin-top: 2.4rem;
-    align-self: center;
+    margin-top: -1.7rem;
 }
 
 .Filters {
@@ -17,7 +16,7 @@
 }
 
 .Property {
-    width: 50%;
+    width: 33%;
 }
 
 .Properties-Button {

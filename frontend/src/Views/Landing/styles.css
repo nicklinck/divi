@@ -1,0 +1,53 @@
+.Landing-Photo {
+    height: 530px;
+    width: 456px;
+}
+
+.Landing-Button {
+    border-radius: 100%;
+}
+
+.Landing-Button :is(p) {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+.Paragraph {
+    font-family: 'Clash Display', sans-serif;  
+    font-size: 80px;       
+}
+
+.Second-Paragraph {
+    width: 717px;
+    font-size: 35px;
+}
+
+.Landing-Connect {
+    color: white;
+    border-color: white;
+}
+
+.Landing-Photo {
+    position: absolute;
+    width: 456px;
+    height: 530px;
+}
+
+#Landing-Right {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#Landing-Left {
+    background: linear-gradient(356.07deg, #9B37FF -14.59%, #0F7ADD 96.79%);
+    position: absolute;
+    width: 295px;
+    height: 856px;
+    left: 1145px;
+    top: 0px;
+    border-radius: 0px 0px 0px 147.5px;
+}

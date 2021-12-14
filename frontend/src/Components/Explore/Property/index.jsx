@@ -1,31 +1,26 @@
-import { Container, Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './styles.css'
 
-const ExploreCard = () => {
-    const navigate = useNavigate();
+const ExploreCard = (props) => {
+  const navigate = useNavigate();
 
-    const exploreView = (id) => {
-        // push to page
-        console.log(id)
-        id = 1 // static
-        navigate(`/property/${id}`)
-    }
+  const exploreView = () => {
+    navigate(`/property/${props.propertyId}`)
+  }
 
-    return (
-        <div className="Property">
-            <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={'/images/example5.png'} />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                </Card.Text>
-                <Button onClick={exploreView} variant="primary">Go somewhere</Button>
-            </Card.Body>
-            </Card>
-        </div>
+  return (
+    <div className="Property">
+      <Card onClick={() => exploreView()}  style={{ width: '18rem', borderRadius: "10%", cursor: "pointer" }}>
+        <Card.Img style={{ borderRadius: "10%" }} className="Card-Image" src={'/images/example5.png'} />
+        <Card.Body >
+          <Card.Title> { props.title } </Card.Title>
+          <Card.Text>  { props.text  } </Card.Text>
+          <Card.Text>  { props.price  } </Card.Text>
+          <Card.Text>  { props.rooms  } </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 

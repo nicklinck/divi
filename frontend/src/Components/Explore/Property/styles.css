@@ -1,5 +1,8 @@
 .Property {
     width: 50%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }

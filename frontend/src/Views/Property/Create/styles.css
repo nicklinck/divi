@@ -2,3 +2,22 @@
     display: grid;
     justify-content: center;
 }
+
+.Property-header {
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 810px) {
+	.Property {
+        width: 100%;
+	}
+}
+
+#Image {
+    display: grid;
+    justify-items: center;
+}
+
+.Property-Image {
+    border-radius: 7%;
+}

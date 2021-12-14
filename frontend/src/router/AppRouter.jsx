@@ -6,6 +6,7 @@ import {
 
 // Components
 import NavBarComponent from '../Components/Landing/NavBarComponent';
+import Footer from '../Components/Footer';
 import ScrollToTop from   './components/ScrollToTop';
 import RedirectTo404 from './components/RedirectTo404/index';
 
@@ -32,6 +33,7 @@ const AppRouter = () => {
         <Route path={routes.propertyView}   element={<PropertyView /> }   />
         <Route path={routes.notFound}       element={<RedirectTo404 />}   />
       </Routes>
+      <Footer />
       </ScrollToTop>
     </Suspense>
   )

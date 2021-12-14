@@ -14,6 +14,11 @@ const Login = () => {
 const CircleCardComponent = () => {
   return (
     <div className="Container">
+      <Row className="mb-4">
+        <div className="SignIn-Header">
+          <h3> Sign In </h3>
+        </div>
+      </Row>
       <Row>
         <Col>
           <Form>
@@ -29,10 +34,10 @@ const CircleCardComponent = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Group className="mb-5" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
-            <Button onClick={Login} className="Button" variant="primary" type="submit">
+            <Button onClick={() => Login()} className="Button" variant="primary" type="submit">
               Submit
             </Button>
           </Form>

@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom';
 import AppRouter from './router/AppRouter';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
+import {AuthProvider} from "./providers/authProvider";
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './index.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <AppRouter />
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Router>
+			<AuthProvider>
+				<AppRouter/>
+			</AuthProvider>
+		</Router>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

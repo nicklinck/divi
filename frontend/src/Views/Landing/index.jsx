@@ -23,14 +23,14 @@ const App = () => {
             </Button>
           </div>
         </Col>
-        <Col id="Landing-Left" className="col-3">
-          <Row>
-            <Button className="Landing-Connect" href={routes.signIn}> Connect </Button >
-          </Row>
-          <Row>
-            <img className="Landing-Photo" src="/images/landingImage.png" alt="Logo" />
-          </Row>
-        </Col>
+        {/*<Col id="Landing-Left" className="col-3">*/}
+        {/*  <Row>*/}
+        {/*    <Button className="Landing-Connect" href={routes.signIn}> Connect </Button >*/}
+        {/*  </Row>*/}
+        {/*  <Row>*/}
+        {/*    <img className="Landing-Photo" src="/images/landingImage.png" alt="Logo" />*/}
+        {/*  </Row>*/}
+        {/*</Col>*/}
       </Row>
     </Container>
   ); 

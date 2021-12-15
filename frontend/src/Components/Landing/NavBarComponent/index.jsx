@@ -46,7 +46,7 @@ const NavBarComponent = () => {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<Navbar bg="light" expand="lg">
+				<Navbar expand="lg">
 					<Container>
 						<Navbar.Brand style={{alignItems: "center"}}>
 							<img className="photo" src="/images/logo3.png" alt="Logo"/>
@@ -64,9 +64,13 @@ const NavBarComponent = () => {
 								<Nav.Link className="link" href={routes.explore}> Explore </Nav.Link>
 								<Nav.Link className="link" href={routes.propertyCreate}> Create </Nav.Link>
 								<Nav.Link className="link" href={routes.signIn}> About </Nav.Link>
-								<img className="photo" src="/images/discord.png" alt="Logo"/>
-								<img className="photo" src="/images/twitter.png" alt="Logo"/>
-								<Button className="link" onClick={init}> {connect} </Button>
+								<a href="https://twitter.com/divi_dao">
+									<img className="photo" src="/images/discord.png" alt="Logo"/>
+								</a>
+								<a href="https://twitter.com/divi_dao">
+									<img className="photo" src="/images/twitter.png" alt="Logo"/>
+								</a>
+								<Button id="Landing-Button" onClick={init}> {connect} </Button>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>

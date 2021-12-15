@@ -16,7 +16,7 @@
 }
 
 .Property {
-    width: 33%;
+    width: 25%;
 }
 
 .Properties-Button {
@@ -27,8 +27,20 @@
     margin-left: 0.22rem;
 }
 
-@media (max-width: 810px) {
+@media (min-width: 800px) and  (max-width: 1000px) {
 	.Property {
-        width: 100%;
+        width: 50%;
+	}
+}
+
+@media ((min-width: 1001px) and (max-width: 1200px)) {
+	.Property {
+        width: 33%;
+	}
+}
+
+@media (min-width: 1201px) {
+	.Property {
+        width: 25%;
 	}
 }

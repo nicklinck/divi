@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 
 function PropertyCreate() {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -31,11 +31,10 @@ function PropertyCreate() {
         </div>
       </Row>
       <Row>
-        <Col id="Image" className="col-6">
-        <img id="target" alt="property" />
+        <Col id="Image" className="col-6" lg={6} md={12} xs={12}>
           <Image style={{ width: "70%", height: "auto" }} 
             fluid
-            src={image}
+            src={ image }
             className="Property-Image"
           />
           <Form className="form" noValidate validated={validated} onSubmit={handleSubmit}>
@@ -57,7 +56,7 @@ function PropertyCreate() {
             </Row>
           </Form>
         </Col>
-        <Col md={4}>
+        <Col lg={6} md={12} xs={12} >
           <Form className="form" noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-4">
               <Form.Group md="10" controlId="validationCustom01">

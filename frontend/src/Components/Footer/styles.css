@@ -21,7 +21,7 @@
     margin: 2rem;
 }
    
-.Column {
+#Column {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -61,8 +61,7 @@
 
 #Get-In {
     border-radius: 27px;
-    /* height: auto;
-    width: 90%; */
+    height: 4rem;
 }
 
 #Im-In {

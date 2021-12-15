@@ -6,31 +6,39 @@ import './styles.css'
 const App = () => {
   return (
     <Container>
-      <Row>
-        <Col id="Landing-Right" className="col-9">
-          <p className="Paragraph"> 
-            <strong> Real Estate Needs 
-              <span style={{ color: "blue" }}> Disruption </span>
-            </strong>
-          </p>
-          <p className="Second-Paragraph"> Fractionalized, on-chain ownership disrupts hard. Find out what’s now possible </p>
-          <div style={{ display: "flex" }}>
-            <Button className="Landing-Button">
-              <Link to={routes.explore} >        <p> Buy Property  </p> </Link> 
-            </Button>
-            <Button className="Landing-Button"> 
-              <Link to={routes.propertyCreate} > <p> Sell Property </p> </Link> 
-            </Button>
-          </div>
+      <Row className="mb-5">
+        <Col xs={12} md={6} className="col-5" id="Landing-Right">
+          <Row className="mb-5">
+          <p className="Paragraph">
+              <strong> Real Estate Needs
+                <span style={{ color: "blue" }}> Disruption </span>
+              </strong>
+            </p>
+          </Row>
+          <Row className="mb-5">
+            <p className="Second-Paragraph"> Fractionalized, on-chain ownership disrupts hard. Find out what’s now possible </p>
+            <div style={{ display: "flex" }}>
+              <Button id="Landing-Button" size="sm">
+                <Link to={routes.explore} >        Buy Property </Link> 
+              </Button>
+              <Button id="Landing-Button" size="sm"> 
+                <Link to={routes.propertyCreate} > Sell Property </Link> 
+              </Button>
+            </div>
+          </Row>
         </Col>
-        {/*<Col id="Landing-Left" className="col-3">*/}
-        {/*  <Row>*/}
-        {/*    <Button className="Landing-Connect" href={routes.signIn}> Connect </Button >*/}
-        {/*  </Row>*/}
-        {/*  <Row>*/}
-        {/*    <img className="Landing-Photo" src="/images/landingImage.png" alt="Logo" />*/}
-        {/*  </Row>*/}
-        {/*</Col>*/}
+        <Col id="Landing-Left" className="col-4">
+          <Row style={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+            <Button style={{
+              color: "white",
+              border: "1px solid white",
+              borderRadius: "30px",
+              width: "70%",
+              marginTop: "1rem"
+            }} className="Landing-Connect" href={routes.signIn}> Connect With Metamask </Button >
+          </Row>
+          <img className="Landing-Photo" src="/images/landingImage.png" alt="Logo" />
+        </Col>
       </Row>
     </Container>
   ); 

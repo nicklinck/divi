@@ -8,11 +8,35 @@
 }
 
 .Carousel {
-    width: 50%;
+    max-width:  20rem;
+    max-height: 20rem;
 }
 
 @media (max-width: 990px) {
 	.Carousel {
         width: 100%;
 	}
+}
+
+#Image-View {
+    width:      auto;
+    height:     20rem;
+    max-width:  auto;
+    max-height: 20rem;
+}
+
+.Overflow-Main-Text-View {
+    white-space: nowrap;
+    width: 100%;;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(94, 93, 93);
+}
+
+.Overflow-Second-Text-View {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(94, 93, 93);
 }

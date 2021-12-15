@@ -3,51 +3,83 @@
     width: 456px;
 }
 
-.Landing-Button {
-    border-radius: 100%;
+#Landing-Button {
+    border-radius: 29px;
+    height: 63px;
 }
 
-.Landing-Button :is(p) {
-    font-size: 24px;
+#Landing-Button :is(a) {
+    font-size: 20px;
     text-decoration: none;
     color: white;
 }
 
 .Paragraph {
     font-family: 'Clash Display', sans-serif;  
-    font-size: 80px;       
+    font-size: 50px;      
+}
+
+a:hover {
+    /* color: blue; */
 }
 
 .Second-Paragraph {
     width: 717px;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .Landing-Connect {
     color: white;
-    border-color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 100%;
 }
 
 .Landing-Photo {
-    position: absolute;
-    width: 456px;
-    height: 530px;
+    width:  30rem;
+    height: 100%;
+    margin-top: 7rem;
 }
 
 #Landing-Right {
     display: grid;
-    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 #Landing-Left {
     background: linear-gradient(356.07deg, #9B37FF -14.59%, #0F7ADD 96.79%);
     position: absolute;
-    width: 295px;
-    height: 856px;
-    left: 1145px;
+    width: 30%;
+    height: 100%;
+    right: 0px;
     top: 0px;
     border-radius: 0px 0px 0px 147.5px;
+    overflow: visible;
+    direction: rtl;
+}
+
+
+@media (max-width: 992px) {
+    .Paragraph {
+        font-size: 25px;
+    }
+    
+    .Second-Paragraph {
+        width: 717px;
+        font-size: 15px;
+        inline-size: 100%;
+        overflow-wrap: break-word;
+    }
+
+    #Landing-Button :is(a) {
+        font-size: 15px;
+    }
+
+    #Landing-Left {
+        display: none;
+    }
 }

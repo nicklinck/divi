@@ -4,37 +4,54 @@ import './styles.css'
   
 const Footer = () => {
   const sendEmail = () => {
+    clearField();
     console.log('Clicked')
+  }
+
+  const clearField = () => {
+    console.log('Clear email')
   }
 
   return (
     <div className="Box">
       <Container className="Footer-Container">
         <Row >
-          <Col className="col-8">
+          <Col xs={12} md={9} className="col-9">
             <div>
-              <h1 className="Title"> <strong> Get the latest updates on Divi-DAO </strong> </h1>
-              <InputGroup className="mb-3">
-                <FormControl
-                  id="Get-In"
-                  placeholder="Email"
-                  aria-label="Email"
-                  aria-describedby="basic-addon2"
-                />
-                <InputGroup.Text 
-                  id="Im-In" 
-                  onClick={() => sendEmail()} 
-                > I'm In 
-                </InputGroup.Text>
-              </InputGroup>
-              <div className="Icons" >
-                <img className="Icon" src="/images/purpleTwitter.png" alt="Logo" />
-                <img className="Icon" src="/images/purpleMedium.png"  alt="Logo" />
-                <img className="Icon" src="/images/purpleDiscord.png" alt="Logo" />
-              </div>
+              <Row className="mb-3">
+                <h1 className="Title"> <strong> Get the latest updates on Divi-DAO </strong> </h1>
+              </Row>
+              <Row className="mb-3">
+                <InputGroup className="mb-3">
+                  <FormControl
+                    id="Get-In"
+                    placeholder="Your e-mail"
+                    aria-label="Email"
+                    aria-describedby="basic-addon2"
+                  />
+                  <InputGroup.Text 
+                    id="Im-In" 
+                    onClick={() => sendEmail()} 
+                  > I'm In 
+                  </InputGroup.Text>
+                </InputGroup>
+              </Row>
+              <Row className="mb-3">
+                <div className="Icons" >
+                  <a href="https://twitter.com/divi_dao">
+                    <img className="Icon" src="/images/purpleTwitter.png" alt="Logo"/>
+                  </a>
+                  <a href="https://twitter.com/divi_dao">
+                    <img className="Icon" src="/images/purpleMedium.png"  alt="Logo" />
+                  </a>
+                  <a href="https://twitter.com/divi_dao">
+                    <img className="Icon" src="/images/purpleDiscord.png" alt="Logo" />
+                  </a>
+                </div>
+              </Row>
             </div>
           </Col>
-          <Col className="Column">
+          <Col xs={12} md={2} className="col-2" id="Column">
             <header className="Heading"> Resources </header>
             <a href="/explore">
               <span> About </span>

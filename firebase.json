@@ -4,8 +4,9 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "build",
+    "public": "frontend/build",
     "ignore": [
+      "scaffold-eth",
       "firebase.json",
       "**/.*",
       "**/node_modules/**"

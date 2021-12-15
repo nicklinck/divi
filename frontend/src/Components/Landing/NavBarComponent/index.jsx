@@ -63,7 +63,7 @@ const NavBarComponent = () => {
                 <Nav.Link className="link" href={routes.signIn}>  About </Nav.Link >
                 <img className="photo" src="/images/discord.png" alt="Logo" />
                 <img className="photo" src="/images/twitter.png" alt="Logo" />
-                <Button className="link" onClick={init}> href={routes.signIn}>  Connect </Button
+                <Button className="link" onClick={init} href={routes.signIn} > Connect </Button>
               </Nav>
             </Navbar.Collapse>
           </Container>

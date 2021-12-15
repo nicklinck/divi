@@ -3,7 +3,7 @@ import './styles.css'
 
 const CountryFilter = (props) => {
   return (
-    <div className="CountryFilter">
+    <div className="Country-Filter">
       <NavDropdown.Item > { props.name } </NavDropdown.Item>
     </div>
   );

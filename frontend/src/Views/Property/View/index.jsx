@@ -53,7 +53,7 @@ const PropertyView = () => {
             </Carousel.Item>
           </Carousel>
         </Col>
-        <Col lg={6} md={12} xs={12} >
+        <Col className="description" lg={6} md={12} xs={12} >
           <Card.Title className="Overflow-Main-Text-View" >
             Miami Penthouse - San Salvador
           </Card.Title>

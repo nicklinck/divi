@@ -39,6 +39,8 @@ a:hover {
     width:  30rem;
     height: 100%;
     margin-top: 7rem;
+    max-width: 600px;
+    max-height: 480px;
 }
 
 #Landing-Right {
@@ -54,7 +56,7 @@ a:hover {
     background: linear-gradient(356.07deg, #9B37FF -14.59%, #0F7ADD 96.79%);
     position: absolute;
     width: 30%;
-    height: 100%;
+    height: 100rem;
     right: 0px;
     top: 0px;
     border-radius: 0px 0px 0px 147.5px;
@@ -63,7 +65,7 @@ a:hover {
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 770px) {
     .Paragraph {
         font-size: 25px;
     }
@@ -81,5 +83,15 @@ a:hover {
 
     #Landing-Left {
         display: none;
+    }
+}
+
+@media (min-width: 771px) and (max-width: 1200px) {
+    .Landing-Photo {
+        width:  20rem;
+        height: 100%;
+        margin-top: 2rem;
+        max-width:  600px;
+        max-height: 480px;
     }
 }

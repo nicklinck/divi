@@ -6,15 +6,6 @@
     text-align: center;
 }
 
-.Properties-filters {
-    display: flex;
-    margin-top: -1.7rem;
-}
-
-.Filters {
-    align-self: center;
-}
-
 .Property {
     width: 25%;
 }

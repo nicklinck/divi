@@ -1,8 +1,16 @@
+import { Row } from 'react-bootstrap';
+import Filters from '../../../src/Components/Explore/Filters'
 import Properties from '../../Components/Explore/Properties'
+import './styles.css';
 
 const Explore = () => {
   return (
-    <Properties/>
+    <>
+      <Row className="Properties-filters">
+        <Filters className="Filters" />
+      </Row>
+      <Properties/>
+    </>
   );
 }
 

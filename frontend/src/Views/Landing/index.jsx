@@ -27,7 +27,7 @@ const App = () => {
             </div>
           </Row>
         </Col>
-        <Col id="Landing-Left" className="col-4">
+        <Col id="Landing-Left" md={4} className="col-4">
           <Row style={{display: "flex", justifyContent: "center", alignContent: "center"}}>
             <Button style={{
               color: "white",

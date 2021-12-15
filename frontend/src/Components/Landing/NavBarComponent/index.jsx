@@ -48,9 +48,11 @@ const NavBarComponent = () => {
 			<header className="App-header">
 				<Navbar expand="lg">
 					<Container>
-						<Navbar.Brand style={{alignItems: "center"}}>
-							<img className="photo" src="/images/logo3.png" alt="Logo"/>
-							<Link className="link" to={routes.landing}> DiviDAO </Link>
+						<Navbar.Brand >
+							<div className="Brand">
+								<img className="photo" src="/images/logo3.png" alt="Logo"/>
+								<Link className="Brand-Link" to={routes.landing}> DiviDAO </Link>
+							</div>
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 						<Navbar.Collapse id="basic-navbar-nav">

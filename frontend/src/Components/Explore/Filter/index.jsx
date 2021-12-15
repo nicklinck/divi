@@ -16,7 +16,6 @@ const Filter = (props) => {
        <NavDropdown
           className="Filter"
           title={ props.name }
-          menuVariant="light"
         >
           <Form.Label> { props.name } </Form.Label>
           <Form.Range onChange={onChange} value={ rangeValue } onChange={ onChange } />

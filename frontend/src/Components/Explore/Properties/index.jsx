@@ -1,14 +1,10 @@
 import { Container, Row } from 'react-bootstrap';
 import Property from '../Property'
-import Filters from '../../../Components/Explore/Filters'
 import './styles.css';
 
 const Properties = () => {
   return (
     <>
-      <Row className="Properties-filters">
-        <Filters className="Filters" />
-      </Row>
       <Container>
         <Row className="Properties">
           <Property className="Property" propertyId={1}  title="Miami Penthouse" text="Miami, FL- USA" price="186.87 ETH/Night" rooms="5 bed rooms" image={'/images/landingImage.png'} />

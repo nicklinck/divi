@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Container, Col, Dropdown, InputGroup, FormControl } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './styles.css'
   
 const Footer = () => {
@@ -37,25 +36,25 @@ const Footer = () => {
           </Col>
           <Col className="Column">
             <header className="Heading"> Resources </header>
-            <a href="#">
+            <a href="/explore">
               <span> About </span>
             </a>
             <a href="https://twitter.com/divi_dao">
               <span> Twitter </span>
             </a>
-            <a href="#">
+            <a href="/explore">
               <span> Discord </span>
             </a>
-            <a href="#">
+            <a href="/explore">
               <span> Explore Properties </span>
             </a>
-            <a href="#">
+            <a href="/explore">
               <span> Sel your property </span>
             </a>
-            <a href="#">
+            <a href="/explore">
               <span> Smart contract </span>
             </a>
-            <a href="#">
+            <a href="/explore">
               <span> Contact us </span>
             </a>
             <Dropdown.Divider />

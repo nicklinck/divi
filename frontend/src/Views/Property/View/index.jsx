@@ -1,6 +1,4 @@
 import { Row, Button, Container, Carousel, Image } from 'react-bootstrap';
-import Property from '../../../Components/Explore/Property'
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';  
 import { mdiArrowLeft } from '@mdi/js';
@@ -8,7 +6,6 @@ import routes from '../../../router/routeList';
 import './styles.css';
 
 const PropertyView = () => {
-  const navigate = useNavigate();
 
   const purchaseProperty = () => {
     console.log('Clicked')

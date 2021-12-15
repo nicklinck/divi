@@ -32,7 +32,7 @@ function PropertyCreate() {
       </Row>
       <Row>
         <Col id="Image" className="col-6">
-        <img id="target" />
+        <img id="target" alt="property" />
           <Image style={{ width: "70%", height: "auto" }} 
             fluid
             src={image}

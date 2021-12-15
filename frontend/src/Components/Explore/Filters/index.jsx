@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Container, Col, Row } from 'react-bootstrap';
+import { Navbar, Col } from 'react-bootstrap';
 import Filter from '../Filter';
 import CountryFilters from '../CountryFilters';
 import './styles.css';

@@ -1,16 +1,9 @@
 import { Container, Row } from 'react-bootstrap';
 import Property from '../Property'
 import Filters from '../../../Components/Explore/Filters'
-import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 const Properties = () => {
-  const navigate = useNavigate();
-
-  const createProperty = () => {
-    navigate(`/property/create`)  
-  }
-
   return (
     <>
       <Row className="Properties-filters">

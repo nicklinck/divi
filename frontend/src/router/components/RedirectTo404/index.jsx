@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import routes from '../../routeList';
 import './styles.css'
 
-const RedirectTo404 = ({ }) => {
+const RedirectTo404 = () => {
   return (
     <Stack gap={2} className="col-md-5 mx-auto">
       <Container>

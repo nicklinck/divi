@@ -17,15 +17,16 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   });
 
   // Getting a previously deployed contract
-  const YourContract = await ethers.getContract("YourContract", deployer);
-  /*  await YourContract.setPurpose("Hello");
+  //const YourContract = await ethers.getContract("YourContract", deployer);
+  //await YourContract.setPurpose("Hello");
   
-    To take ownership of yourContract using the ownable library uncomment next line and add the 
-    address you want to be the owner. 
-    // yourContract.transferOwnership(YOUR_ADDRESS_HERE);
+  //  To take ownership of yourContract using the ownable library uncomment next line and add the
+  //  address you want to be the owner.
+  //YourContract.transferOwnership("0x08027d04aE6E4F52659a3c3D85f4F8A536d8Edbe");
 
-    //const yourContract = await ethers.getContractAt('YourContract', "0xaAC799eC2d00C013f1F11c37E654e59B0429DF6A") //<-- if you want to instantiate a version of a contract at a specific address!
-  */
+  const YourContract = await ethers.getContractAt('YourContract', "0x7cb309BCC3f3D1C66C6f6136D85f4C33032Df2F9") //<-- if you want to instantiate a version of a contract at a specific address!
+  await YourContract.createProperty(100)
+
 
   /*
   //If you want to send value to an address from the deployer
@@ -53,12 +54,14 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
 
   // Verify your contracts with Etherscan
   // You don't want to verify on localhost
+  /*
   if (chainId !== localChainId) {
     await run("verify:verify", {
       address: YourContract.address,
       contract: "contracts/YourContract.sol:YourContract",
       contractArguments: [],
     });
-  }
+  }*/
 };
 module.exports.tags = ["YourContract"];
+

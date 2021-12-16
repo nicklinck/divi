@@ -71,15 +71,16 @@ contract YourContract is ERC1155 {
     }
 
     // request to buy shares of a property
+    // msg.sender is the person who is asking to buy shares
     function requestPropertyShares(uint256 propertyID, uint256 shares) payable public {
         uint256 totalCost = shares * properties[propertyID].pricePerShare;
 
         // check if the property exists
         require(propertyID < currentPropertyID, "Property does not exist");
-        require(msg.value >= totalCost); // TODO: return difference to sender if more than enough
-        require(msg.sender != properties[propertyID].creator);
-        require(shares <= properties[propertyID].availableShares);
-        require(shares > 0);
+        require(msg.value >= totalCost, "Must sent more ETH"); // TODO: return difference to sender if more than enough
+        require(msg.sender != properties[propertyID].creator, "Cannot buy your own property");
+        require(shares <= properties[propertyID].availableShares, "Not enough shares of the property available");
+        require(shares > 0, "Must request more than 0 shares");
 
         PropertyOrderRequest memory propertyOrderRequest = PropertyOrderRequest(currentOrderID, payable(msg.sender), propertyID, shares, Status.Pending);
         propertyOrderRequests.push(propertyOrderRequest);

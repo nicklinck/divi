@@ -1,12 +1,15 @@
 import { Container, Button, Row, Col, Form, InputGroup, Image } from 'react-bootstrap';
 import { useState } from 'react';
 import './styles.css';
+import Web3 from "web3";
+import contract from '../../../contract/contract.json';
 
 function PropertyCreate() {
   const [image, setImage] = useState("");
   const [validated, setValidated] = useState(false);
+  const [price, setPrice] = useState(0);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
     
     if (form.checkValidity() === false) {
@@ -14,7 +17,20 @@ function PropertyCreate() {
       event.stopPropagation();
     }
 
-    setValidated(true);
+    // call the smart contract to create the property on chain.
+    console.log('Creating new Property with Smart Contract')
+    const web3 = new Web3(Web3.givenProvider)// || "https://localhost:3000") //TODO: understand this or switch to alchemy
+    console.log('current provider: ', web3.currentProvider)
+    const accounts = await web3.eth.getAccounts()
+    console.log('accounts" ', accounts)
+    console.log('using account: ', accounts[0])
+    const diviContract = new web3.eth.Contract(contract.abi, contract.address)
+    console.log('contract: ', diviContract)
+    await diviContract.methods.createProperty(price).send({from: accounts[0]}) //TODO: allow floats to be inputed here.
+
+    //test
+    setValidated(true); //TODO: not okay to have setValidated to true after call to smart contract, but otherwise
+                        // the smart contract is not being called.
   };
 
   const onImageChange = (event) => {
@@ -65,6 +81,7 @@ function PropertyCreate() {
                   required
                   type="text"
                   placeholder="Price"
+                  onChange={(event) => setPrice(event.target.value)}
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 <Form.Control.Feedback type="invalid">
